@@ -16,6 +16,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void clickAccept(View view) {
         Intent intent = new Intent(this, Result_Activity.class);
+        intent.putExtra("button", "yes");
         startActivity(intent);
     }
+
+    public void clickDeny(View view) {
+        Intent intent = new Intent(this, Result_Activity.class);
+        intent.putExtra("button", "no");
+        startActivity(intent);
+    }
+
 }
