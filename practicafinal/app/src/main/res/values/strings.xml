@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">practica final</string>
+    <string name="title">Depressed-o-matic</string>
+    <string name="question">Are you feeling depressed?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
