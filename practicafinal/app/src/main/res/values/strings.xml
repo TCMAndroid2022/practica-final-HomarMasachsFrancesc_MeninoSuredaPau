@@ -9,7 +9,8 @@
     <string name="back">Back</string>
     <string name="message_encouragement">You are doing great, take a doggo</string>
     <string name="dog">"Dog "</string>
-    <string name="text_form">Write the breed you lik the most from the list</string>
+    <string name="text_form">Write the breed you lik the most from the list or click it</string>
     <string name="breed">Breed</string>
     <string name="save">Save</string>
+    <string name="goku_encouragement">Keep going master</string>
 </resources>

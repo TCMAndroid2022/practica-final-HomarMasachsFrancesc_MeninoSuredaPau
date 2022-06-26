@@ -9,7 +9,8 @@
     <string name="back">Enrere</string>
     <string name="message_encouragement">Ho estas fent perfectament, mira un gos</string>
     <string name="dog">"Gos "</string>
-    <string name="text_form">Escriu quina raça de gos t\'agrada més</string>
+    <string name="text_form">Escriu quina raça de gos t\'agrada més o clica-la</string>
     <string name="breed">Raça</string>
     <string name="save">Guardar</string>
+    <string name="goku_encouragement">Continua endavant master</string>
 </resources>
