@@ -98,7 +98,7 @@ public class FormActivity extends AppCompatActivity implements AdapterBreed.OnNo
         existBreed = false;
         String enteredText = typeOfDog.getText().toString();
         if (enteredText.equals("")){
-            Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
+            typeOfDog.setError("Please enter a valid breed");
             formCorrect = false;
         }
         for (String breed: breedList){
@@ -113,6 +113,8 @@ public class FormActivity extends AppCompatActivity implements AdapterBreed.OnNo
             intent.putExtra("breed", typeOfDog.getText().toString());
             setResult(RESULT_OK, intent);
             finish();
+        }else{
+            typeOfDog.setError("Please enter a valid breed");
         }
     }
 
