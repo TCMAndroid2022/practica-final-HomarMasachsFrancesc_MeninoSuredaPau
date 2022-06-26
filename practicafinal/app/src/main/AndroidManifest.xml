@@ -16,9 +16,13 @@
         android:theme="@style/Theme.PracticaFinal"
         tools:targetApi="31">
         <activity
-            android:name=".Result_Activity"
+            android:name=".FormActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".Result_Activity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

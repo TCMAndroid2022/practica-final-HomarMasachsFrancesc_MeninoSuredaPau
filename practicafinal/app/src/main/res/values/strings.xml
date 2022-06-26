@@ -6,4 +6,10 @@
     <string name="no">No</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back">Back</string>
+    <string name="message_encouragement">You are doing great, take a doggo</string>
+    <string name="dog">"Dog "</string>
+    <string name="text_form">Write the breed you lik the most from the list</string>
+    <string name="breed">Breed</string>
+    <string name="save">Save</string>
 </resources>

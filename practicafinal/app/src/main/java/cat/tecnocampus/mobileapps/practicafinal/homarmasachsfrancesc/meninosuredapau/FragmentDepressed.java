@@ -38,7 +38,7 @@ public class FragmentDepressed extends Fragment{
     List<String> images = new ArrayList<String>();
     RecyclerView imageList;
     RequestQueue queue;
-    String url = "https://dog.ceo/api/breeds/image/random/10";
+    String url;
     JSONArray photoUrl;
 
     @Override
@@ -53,6 +53,15 @@ public class FragmentDepressed extends Fragment{
 
         imageList = rootView.findViewById(R.id.imageList);
         imageList.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        Bundle bundle = getArguments();
+        if (bundle == null){
+            url = "https://dog.ceo/api/breeds/image/random/10";
+        }else if(bundle.getString("breed").equals("random")){
+            url = "https://dog.ceo/api/breeds/image/random/10";
+        }else{
+            url = "https://dog.ceo/api/breed/"+bundle.getString("breed")+"/images/random/10";
+        }
 
         queue = Volley.newRequestQueue(getContext());
 
