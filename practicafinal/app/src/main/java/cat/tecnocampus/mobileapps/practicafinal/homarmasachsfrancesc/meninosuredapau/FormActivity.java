@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,14 +37,18 @@ public class FormActivity extends AppCompatActivity implements AdapterBreed.OnNo
     RecyclerView breedRV;
     Boolean formCorrect, existBreed;
     EditText typeOfDog;
+    SharedPreferences prefs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
 
+        prefs = getSharedPreferences("MyPreferences", Context.MODE_PRIVATE);
+
         queue = Volley.newRequestQueue(this);
 
         typeOfDog = findViewById(R.id.typeofdog);
+        typeOfDog.setText(prefs.getString("breed", ""));
 
         breedRV = findViewById(R.id.breedList);
         breedRV.setLayoutManager(new LinearLayoutManager(this));
@@ -111,6 +117,9 @@ public class FormActivity extends AppCompatActivity implements AdapterBreed.OnNo
         if (formCorrect && existBreed){
             Intent intent = new Intent();
             intent.putExtra("breed", typeOfDog.getText().toString());
+            SharedPreferences.Editor editor = prefs.edit();
+            editor.putString("breed", typeOfDog.getText().toString());
+            editor.commit();
             setResult(RESULT_OK, intent);
             finish();
         }else{
